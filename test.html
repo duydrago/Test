@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>YOKOHAMA'S ANIMAL LIFE</title>
+<link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+<!-- ヘッダーここから -->
+<header>
+        <img src="images/YSE.gif" alt="YSE Tourism" id="header__logo">
+		<nav>
+			<ul id="ul">
+				<li class="li"><a href="#menu1">プランのポイント</a></li>
+				<li class="li"><a href="#menu2">行程表</a></li>
+				<li class="li"><a href="#menu3">動画</a></li>
+				<li class="li"><a href="#menu4">料金</a></li>
+				<li class="li"><a href="https://forms.gle/764CVDqxGqY5YvDu6" target="_blank">申込</a> </li>
+			</ul>
+		</nav>
+</header>
+<!-- ヘッダーここから -->
+
+<div id="contents">
+<!-- メイン領域ここから -->
+<div id="main">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">トップ <br> へ &#8679</button>
+    <script>
+        //Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() { 
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+} else {
+    mybutton.style.display = "none";
+}
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+    </script>
+	<!-- Slideshow container -->
+<div class="slideshow-container">
+	<!-- Full-width images with number and caption text -->
+	<div class="mySlides_2 fade">
+	<div class="numbertext">1 / 2</div>
+	<img src="images/poster.jpg" alt="poster" class="main_logo">
+	</div>
+
+	<div class="mySlides_2 fade">
+	<div class="numbertext">2 / 2</div>
+	<img src="images/poster_2.png" alt="poster" class="main_logo">
+	</div>
+
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+		<span class="dot_2" onclick="currentSlide(1)"></span>
+		<span class="dot_2" onclick="currentSlide(2)"></span>
+	</div>
+</div>
+<script>
+	var slideIndex = 0;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides_2");
+var dots = document.getElementsByClassName("dot_2");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+	<!-- セクション①-1ここから -->
+	<section>
+		<!-- 1カラムの例 -->
+		<h3 class="menu" id="menu1">プランのポイント</h3>
+		<div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/point1.png" class="slide__image">
+            <div class="text">綺麗な高層階ホテルにとまる。</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/point2.png" class="slide__image">
+            <div class="text">動物の生態を見に行きます。</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/point3.jpg" class="slide__image">
+            <div class="text">遊園地と中華街に行きます。</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/point4.png" class="slide__image">
+            <div class="text">美味しいレストランで食事します。</div>
+        </div>
+
+    </div>
+    <br>
+        
+        <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <script>
+    var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+
+    </script>
+	</section>
+	<!-- セクション①-1ここまで -->
+
+	<!-- セクション①-2ここから -->
+	
+	<!-- セクション①-2ここまで -->
+
+	<!-- セクション②ここから -->
+	<section>
+		<div class="schedule">
+			<h3 class="menu" id="menu2">行程表</h3>
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'day1')" id="defaultOpen"><h1>１日目</h1></button>
+				<button class="tablinks" onclick="openCity(event, 'day2')"><h1>2日目</h1></button>
+				<button class="tablinks" onclick="openCity(event, 'day3')"><h1>3日目</h1></button>
+			</div>
+			<div id="day1" class="tabcontent">
+			<table>
+				<tr>
+					<th>10:00</th>
+					<td>ホテルに集まる。ホテルに荷物を預ける。</td>
+				</tr>
+				<tr>
+					<th>11:00</th>
+					<td>24/7レストランで昼食。</td>
+				</tr>
+				<tr>
+					<th>13:00</th>
+					<td>野毛山動物園に行って、遊びます。</td>
+				</tr>
+				<tr>
+					<th>16:30</th>
+					<td>遊園地に行って、遊びます。</td>
+				</tr>
+				<tr>
+					<th>19:30</th>
+					<td>しゃぶしゃぶのレストランで夕食。交流会を行う。</td>
+				</tr>
+				<tr>
+					<th>22:00</th>
+					<td>ホテルに戻ります。</td>
+				</tr>
+			</table>
+			</div>
+			<div id="day2" class="tabcontent">
+			<table>
+				<tr>
+					<th>9:00</th>
+					<td>ホテルの前に 集合。ホテルのレストランで朝食。</td>
+				</tr>
+				<tr>
+					<th>10：30</th>
+					<td>水族館に行きます。</td>
+				</tr>
+				<tr>
+					<th>13:00</th>
+					<td>コスパ良しな「バイキング」で昼食。</td>
+				</tr>
+				<tr>
+					<th>18:00</th>
+					<td>中華街に行って、夕食。</td>
+				</tr>
+				<tr>
+					<th>22:00</th>
+					<td>ホテルに戻ります。</td>
+				</tr>
+			</table>
+		</div>
+		<div id="day3" class="tabcontent">
+			<table>
+				<tr>
+					<th>7:30</th>
+					<td>横浜ランドマークタワー集合、高層階のレストランで朝食。</td>
+				</tr>
+				<tr>
+					<th>9:00</th>
+					<td>ランドマークタワー に入って、買い物します。</td>
+				</tr>
+				<tr>
+					<th>11:00</th>
+					<td>チェックアウト時間。</td>
+				</tr>
+				<tr>
+					<th>11:30</th>
+					<td>寿司レストランで昼食します。</td>
+				</tr>
+				<tr>
+					<th>13:00</th>
+					<td>ズーラシアに行きます。</td>
+				</tr>
+				<tr>
+					<th>16:30</th>
+					<td>旅を終了。</td>
+				</tr>
+			</table>
+		</div>
+		<script>
+			function openCity(evt, cityName) {
+		  // Declare all variables
+		var i, tabcontent, tablinks;
+		
+		  // Get all elements with class="tabcontent" and hide them
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		
+		  // Get all elements with class="tablinks" and remove the class "active"
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		
+		  // Show the current tab, and add an "active" class to the button that opened the tab
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+		}
+		document.getElementById("defaultOpen").click();
+		</script>
+	</section>
+	<!-- セクション②ここまで -->
+
+	<!-- セクション③ここから -->
+	<section>
+		<h3 class="menu" id="menu3">動画</h3>
+		<p>私たちのプランのポイントは動画をご覧ください。</p>
+		<video src="movies/KA-TA-NA.mp4" width="720px" controls="true"></video>
+	</section>
+	<!-- セクション③ここまで -->
+
+	<!-- セクション④ここから -->
+	<section>
+		<h3 class="menu" id="menu4">料金</h3>
+		<p>ここは、料金です。</p>
+		<table id="money">
+			<tr>
+				<th>項目</th>
+				<th>1名料金</th>
+			</tr>
+			<tr>
+				<th>レギュラーフロア コンフォートツイン ベイブリッジビュー」の部屋</th>
+				<td class="price">30,000円</td>
+			</tr>
+			<tr>
+				<th>食費、交通費、観光地の入場料</th>
+				<td class="price">約50,000 円</td>
+			</tr>
+		</table>
+	</section>
+	<!-- セクション④ここまで -->
+</div>
+<!-- メイン領域ここまで -->
+
+<!-- サイドバーここから -->
+<aside>
+	<section>
+		<h4>KATANAチーム</h4>
+		<p>私たちのチームの紹介は動画をご覧ください。</p>
+		<video src="movies/team.mp4" width="240px" controls="true"></video>
+		
+	</section>
+	<section>
+		<h4>私たちより</h4>
+		<p class="message">横浜市のイロイロな動物園や水族館を見学します。	動物園でライオン、トラ、ペングインなどの珍しい動物を見られます。</p>
+		<p class="message">水族館では海の生き物たちを見て、ふれあえます。</p>
+		<p class="message">みなとみらいのきれいな夜景を見て、中華街の有名なレストランで美味しいものが食べられます。</p>
+		<p class="message">楽しい思い出をたくさん作りましょう！</p>
+	</section>
+	<div class="side">
+		<img src="images/side.png" alt="Side Images" class="side_images">
+		<img src="images/side_1.jpg" alt="Side Images" class="side_images">
+		<img src="images/side_2.jpg" alt="Side Images" class="side_images">
+		<img src="images/side_3.jpg" alt="Side Images" class="side_images">
+		<img src="images/side_4.jpg" alt="Side Images" class="side_images">
+		
+	</div>
+</aside>
+<!-- サイドバーここまで -->
+</div>
+
+<!-- フッターここから -->
+<footer>
+	<p><small>Copyright YSE Tourism. All rights reserved.</small></p>
+</footer>
+<!-- フッターここから -->
+</body>
+</html>
